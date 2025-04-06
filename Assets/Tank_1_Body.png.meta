@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 334bcdce941ee7945bc717ced988f3b0
+guid: 93c1748869f52af4581711e724bca56e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 319341050730407517
-    second: Tank1_Body_0
+      213: -7257965630370851010
+    second: Tank1_Body (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tank1_Body_0
+      name: Tank1_Body (1)_0
       rect:
         serializedVersion: 2
-        x: 39
-        y: 34
-        width: 68
-        height: 62
+        x: 49
+        y: 28
+        width: 64
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d566cf26ef68e6400800000000000000
-      internalID: 319341050730407517
+      spriteID: e3750c9a6b6864b90800000000000000
+      internalID: -7257965630370851010
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tank1_Body (1)_0: -7257965630370851010
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

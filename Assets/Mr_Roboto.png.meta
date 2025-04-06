@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1ebe59cd111c5d742a732c6fd50667e3
+guid: 8a4c6d865e4a758459c81f232b894bac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5616992757108326276
-    second: file (2)_0
+      213: -190618582253480986
+    second: Mr_Roboto_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: file (2)_0
+      name: Mr_Roboto_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 9
-        width: 80
-        height: 38
+        x: 3
+        y: 3
+        width: 56
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 48f3269072193fd40800000000000000
-      internalID: 5616992757108326276
+      spriteID: 6e3513dc869ca5df0800000000000000
+      internalID: -190618582253480986
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mr_Roboto_0: -190618582253480986
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
