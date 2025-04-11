@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8a4c6d865e4a758459c81f232b894bac
+guid: bd6c583da84c73d4ba599a47d2ca14af
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -190618582253480986
-    second: Mr_Roboto_0
+      213: 2207531350774046761
+    second: Tile_1_Edge_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mr_Roboto_0
+      name: Tile_1_Edge_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 56
-        height: 104
+        x: 17
+        y: 12
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e3513dc869ca5df0800000000000000
-      internalID: -190618582253480986
+      spriteID: 920ec69411ab2ae10800000000000000
+      internalID: 2207531350774046761
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mr_Roboto_0: -190618582253480986
+      Tile_1_Edge_0: 2207531350774046761
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
