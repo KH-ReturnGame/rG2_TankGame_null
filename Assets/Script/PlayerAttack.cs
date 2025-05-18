@@ -19,17 +19,19 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if (Input.GetKey("space") && canshot)
-            {
-                Instantiate(bullet, pos.position, transform.rotation);
-                StartCoroutine("Delay");
+        // Fire when space key pressed
+        if (Input.GetKey("space") && canshot)
+        {
+            Instantiate(bullet, pos.position, transform.rotation);
+            StartCoroutine("Delay");
             canshot = false;
-            }
+        }
     }
 
+    // Attack Delay
     IEnumerator Delay()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(cooltime);
         canshot = true;
     }
 }

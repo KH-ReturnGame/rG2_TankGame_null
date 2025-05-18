@@ -4,7 +4,7 @@ public class InheritSpriteColor : MonoBehaviour
 {
     SpriteRenderer parentRenderer;
     SpriteRenderer myRenderer;
-
+    // Follow parent's renderer
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

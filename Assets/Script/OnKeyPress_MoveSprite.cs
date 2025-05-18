@@ -14,12 +14,18 @@ public class OnKeyPress_MoveSprite : MonoBehaviour
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
 
+    public float maxHealth = 100;
+    private float curHealth;
+
+    public GameManager gameManager;
+
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigid.gravityScale = 0;
         //rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+        curHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -28,6 +34,7 @@ public class OnKeyPress_MoveSprite : MonoBehaviour
         vx = 0;
         vy = 0;
 
+        //이동 방향 및 속도 결정
         if(Input.GetKey("right"))
         {
             vx = speed;
@@ -70,6 +77,7 @@ public class OnKeyPress_MoveSprite : MonoBehaviour
 
     void FixedUpdate()
     {
+        //이동
         rigid.linearVelocity = new Vector2(vx, vy);
 
         this.GetComponent<SpriteRenderer>().flipX = leftFlag;
@@ -77,14 +85,25 @@ public class OnKeyPress_MoveSprite : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        // 적과 충돌
+        if (collision.gameObject.tag == "Enemy_2")
         {
             OnDamaged(collision.transform.position);
+        }
+        if (collision.gameObject.tag == "Enemy_1")
+        {
+            TakeDamage(9999);
+        }
+        // Finish_Point
+        if (collision.gameObject.tag == "Finish")
+        {
+            // Finish
         }
     }
 
     void OnDamaged(Vector2 targetPos)
     {
+        // 적과 충돌 시 무적 시간
         gameObject.layer = 8;
         spriteRenderer.color = new Color(1, 1, 1, 0.4f); 
         int dircX = transform.position.x - targetPos.x > 0 ? 1 : -1;
@@ -94,9 +113,27 @@ public class OnKeyPress_MoveSprite : MonoBehaviour
         Invoke("OffDamaged", 3);
     }
 
+    public void TakeDamage(float damage)
+    {
+        curHealth -= damage;
+        Debug.Log("Player Health: " + "-" + damage + "->" + curHealth);
+
+        if (curHealth <= 0)
+        {
+            Die();
+            Debug.Log("Player is destroyed");
+        }
+    }
+
     void OffDamaged()
     {
+        // 무적 시간 해제
         gameObject.layer = 3;
         spriteRenderer.color = new Color(1, 1, 1, 1);
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
     }
 }
