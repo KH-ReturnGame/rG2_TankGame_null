@@ -15,7 +15,7 @@ public class OnKeyPress_MoveSprite : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     public float maxHealth = 100;
-    private float curHealth;
+    public float curHealth;
 
     public GameManager gameManager;
 
@@ -89,15 +89,27 @@ public class OnKeyPress_MoveSprite : MonoBehaviour
         if (collision.gameObject.tag == "Enemy_2")
         {
             OnDamaged(collision.transform.position);
+            TakeDamage(10);
         }
         if (collision.gameObject.tag == "Enemy_1")
         {
             TakeDamage(9999);
         }
         // Finish_Point
-        if (collision.gameObject.tag == "Finish")
+        //if (collision.gameObject.tag)
+        //{
+        //    gameManager.NextStage();
+        //    Debug.Log("Finish, next stage");
+        //}
+    }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        // Finish_Point
+        if (collider.CompareTag("Finish"))
         {
-            // Finish
+            gameManager.NextStage();
+            Debug.Log("Finish, next stage");
         }
     }
 
@@ -120,8 +132,7 @@ public class OnKeyPress_MoveSprite : MonoBehaviour
 
         if (curHealth <= 0)
         {
-            Die();
-            Debug.Log("Player is destroyed");
+            gameManager.GameOver();
         }
     }
 
@@ -132,7 +143,7 @@ public class OnKeyPress_MoveSprite : MonoBehaviour
         spriteRenderer.color = new Color(1, 1, 1, 1);
     }
 
-    void Die()
+    public void Die()
     {
         Destroy(gameObject);
     }

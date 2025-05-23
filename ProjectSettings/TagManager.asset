@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Enemy
+  - Enemy_1
+  - Enemy_2
+  - Damage_Zone
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - Platform
   - Enemy
   - PlayerDamaged
-  - 
+  - DamageZone
   - 
   - 
   - 

@@ -8,6 +8,7 @@ public class EnemyMove : MonoBehaviour
     public int nextMove;
     public int maxHealth = 100;
     private int curHealth;
+    public float MoveSpeed;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -26,7 +27,7 @@ public class EnemyMove : MonoBehaviour
     void FixedUpdate()
     {
         // Move
-        rigid.linearVelocity = new Vector2(nextMove, rigid.linearVelocity.y);
+        rigid.linearVelocity = new Vector2(nextMove * MoveSpeed, rigid.linearVelocity.y);
         // Platform Check
         if(nextMove == 1)
         {
